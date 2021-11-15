@@ -6,6 +6,11 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(180deg, #249688 16vh , #dddbd1 0%, #d2dbdb 100%);
-
+  background: linear-gradient(180deg, #249688 24vh , #dddbd1 0%, #d2dbdb 100%);
 };
+
+.wrapper {
+  height: 900px;
+  width: 800px;
+  background-color: #000000;
+}
