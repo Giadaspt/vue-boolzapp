@@ -7,8 +7,20 @@
 body {
   height: 97.5vh;
   background: linear-gradient(180deg, #249688 16vh , #dddbd1 0%, #d2dbdb 100%);
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* titles */
+h5 {
+ font-weight: 600;
+}
+
+.userChat h5 {
+  font-weight: 500;
+}
+
+
+/* container wrapper */
 .wrapper {
   display: flex;
   height: 93vh;
@@ -18,23 +30,37 @@ body {
   margin-top: 20px;
 }
 
+/* top part where there's image and name user, either on the left anda right side */
+/* common classes */
+.user, .userChat {
+  height: 60px; /* poi questa andrà tolta */
+  background-color: rgb(234,234,234);
+}
+
+.iconsTopUser, .iconsTopUserChatSide {
+  position: absolute;
+  right: 0;
+  color: rgb(178,177,176);
+}
+
+.iconsTopUser i, .iconsTopUserChatSide i {
+  padding-right: 20px;
+}
+
+/* box of contact, where you find the name of the whatsapp's owner and list of contact you chatted with */
 .contactBox {
   width: 40%;
   background-color: blueviolet;
 }
 
-.chatBox {
-  width: 60%;
-  background-color: rgb(226, 214, 43);
-}
-
-.user, .userChat {
-  height: 60px;
-  background-color: #ffff;
-}
-
 .user {
-  border-right: 1px solid rgba(178,177,176,.54);
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgb(178,177,176);
+}
+
+.contactList{
   overflow: auto;
 }
 
@@ -48,6 +74,29 @@ body {
   background-color: #ffff;
 }
 
+/* user image and name */
+.userImage {
+  height: 60px;
+  width: 60px;
+  padding: 8px;
+}
+
+.userImage img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* section of the chat where you write messages*/ 
+.chatBox {
+  width: 60%;
+  background-color: rgb(226, 214, 43);
+}
+
+.userChat {
+  display: flex;
+  align-items: center;
+}
+
 .chatScreen {
   height: 72vh;
   width: 97%;
@@ -59,3 +108,5 @@ body {
   height: 71px;
   background-color: rgb(55, 47, 126);
 }
+
+

@@ -5,6 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.css">
   <title>vue-boolzapp</title>
 </head>
@@ -14,17 +29,44 @@
 
     <div class="wrapper">
       
-      <div class="contactBox">
+      <!-- section of the contact on the left side -->
+      <section class="contactBox">
         <div class="user">
+          <div class="userImage">
+            <img src="img/avatar_io.jpg" alt="">
+          </div>
+          <h5>Nome Utente</h5>
+
+          <div class="iconsTopUser">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
         </div>
-        <div class="notification"></div>
-        <div class="contactUser"></div>
-      </div>
-      <div class="chatBox">
-        <div class="userChat"></div>
+        <div class="contactList">
+          <div class="notification"></div>
+          <div class="contactUser"></div> 
+        </div>
+
+      </section>
+
+      <!-- section of the chat where you can write to people -->
+      <section class="chatBox">
+        <div class="userChat">
+          <div class="userImage">
+            <img src="img/avatar_1.jpg" alt="">
+          </div>
+          <h5>Michele</h5>
+
+          <div class="iconsTopUserChatSide">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
         <div class="chatScreen" ></div>
         <div class="typeInput" ></div>
-      </div>
+      </section>
     </div>
 
 
