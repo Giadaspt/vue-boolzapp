@@ -5,12 +5,57 @@
 }
 
 body {
-  height: 100vh;
-  background: linear-gradient(180deg, #249688 24vh , #dddbd1 0%, #d2dbdb 100%);
-};
+  height: 97.5vh;
+  background: linear-gradient(180deg, #249688 16vh , #dddbd1 0%, #d2dbdb 100%);
+}
 
 .wrapper {
-  height: 900px;
-  width: 800px;
-  background-color: #000000;
+  display: flex;
+  height: 93vh;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffff;
+  margin-top: 20px;
+}
+
+.contactBox {
+  width: 40%;
+  background-color: blueviolet;
+}
+
+.chatBox {
+  width: 60%;
+  background-color: rgb(226, 214, 43);
+}
+
+.user, .userChat {
+  height: 60px;
+  background-color: #ffff;
+}
+
+.user {
+  border-right: 1px solid rgba(178,177,176,.54);
+  overflow: auto;
+}
+
+.notification {
+  height: 90px;
+  background-color: #8edafc;
+}
+
+.contactUser {
+  height: 70px;
+  background-color: #ffff;
+}
+
+.chatScreen {
+  height: 72vh;
+  width: 97%;
+  background-color: rgb(112, 45, 45);
+  overflow: auto;
+}
+
+.typeInput {
+  height: 71px;
+  background-color: rgb(55, 47, 126);
 }
