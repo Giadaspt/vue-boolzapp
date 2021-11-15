@@ -10,13 +10,26 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* titles */
+/* textx: titles and p in general, all text below*/
 h5 {
  font-weight: 600;
 }
 
 .userChat h5 {
   font-weight: 500;
+}
+
+.notification h5 {
+  font-weight: 500;
+}
+
+.userChat p, .notification p {
+  font-size: 11px;
+}
+
+.notification p {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, .7);
 }
 
 
@@ -33,18 +46,33 @@ h5 {
 /* top part where there's image and name user, either on the left anda right side */
 /* common classes */
 .user, .userChat {
-  height: 60px; /* poi questa andrà tolta */
   background-color: rgb(234,234,234);
 }
 
+/* all icons */
 .iconsTopUser, .iconsTopUserChatSide {
   position: absolute;
-  right: 0;
   color: rgb(178,177,176);
 }
 
 .iconsTopUser i, .iconsTopUserChatSide i {
-  padding-right: 20px;
+  padding-right: 18px;
+}
+
+.notificationIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #ffff;
+  margin-right: 16px;
+}
+
+.notificationIcon i{
+  font-size: 20px;
+  color: #8edafc;
 }
 
 /* box of contact, where you find the name of the whatsapp's owner and list of contact you chatted with */
@@ -60,13 +88,24 @@ h5 {
   border-right: 1px solid rgb(178,177,176);
 }
 
+.iconsTopUser {
+  right: 0;
+}
+
 .contactList{
   overflow: auto;
 }
 
 .notification {
-  height: 90px;
+  display: flex;
+  align-items: center;
   background-color: #8edafc;
+  padding: 18px;
+}
+
+.searchContact {
+  height: 40px;
+  background-color: tomato;
 }
 
 .contactUser {
@@ -97,11 +136,19 @@ h5 {
   align-items: center;
 }
 
+.iconsTopUserChatSide {
+  right: 10%;
+}
+
 .chatScreen {
   height: 72vh;
   width: 97%;
-  background-color: rgb(112, 45, 45);
-  overflow: auto;
+
+}
+
+.chatScreen img {
+  height: 100%;
+  width: 100%;
 }
 
 .typeInput {
