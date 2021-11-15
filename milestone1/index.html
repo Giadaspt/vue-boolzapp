@@ -71,14 +71,16 @@
 
         <!-- list of chats to chat -->
         <div class="contactUser">
-          <div class="contactListItem">
+          <div 
+          v-for="(item, index) in contacts"
+          class="contactListItem">
             <div class="userImage">
               <div class="userImageContain">
-                <img src="img/avatar_1.jpg" alt="">
+                <img :src="item.avatar" alt="">
               </div>
               <div class="textuserChat">
-                <h5>Michele</h5>
-              <p>Tutto fatto!...</p>
+                <h5>{{item.name}}</h5>
+                <p>Tutto fatto!...</p>
               </div>
             </div>
             <div class="contactUserDate">
@@ -133,28 +135,10 @@
         </div>
       </section>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
-
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="milestone 1/js/script.js"></script>
+  <script src="milestone1/js/script.js"></script>
 </body>
 
 </html>
