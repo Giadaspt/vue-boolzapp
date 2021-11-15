@@ -34,11 +34,13 @@
       
       <!-- section of the contact on the left side -->
       <section class="contactBox">
-        <div class="user">
+        <div class="userMe">
           <div class="userImage">
-            <img src="img/avatar_io.jpg" alt="">
+            <div class="userImageContain">
+              <img src="img/avatar_io.jpg" alt="">
+            </div>
+            <h5>Nome Utente</h5>
           </div>
-          <h5>Nome Utente</h5>
 
           <div class="iconsTopUser">
             <i class="fas fa-circle-notch"></i>
@@ -46,43 +48,89 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="contactList">
-          <div class="notification">
-            <div class="notificationIcon">
-              <i class="fas fa-bell-slash"></i>
-            </div>
-            <div class="textUser">
-              <h5>Ricevi notifiche dei nuovi messaggi</h5>
-              <p>Attiva notifiche desktop</p>
-            </div>
+
+        <!-- notification -->
+        <div class="notification">
+          <div class="notificationIcon">
+            <i class="fas fa-bell-slash"></i>
           </div>
-          <div class="searchContact"></div>
-          <div class="contactUser"></div> 
+
+          <div class="textUser">
+            <h5>Ricevi notifiche dei nuovi messaggi</h5>
+            <p>Attiva notifiche desktop</p>
+          </div>
         </div>
 
+        <!-- search bar upon contact list -->
+        <div class="searchContact">
+          <div class="searchContactIcon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
+
+        <!-- list of chats to chat -->
+        <div class="contactUser">
+          <div class="contactListItem">
+            <div class="userImage">
+              <div class="userImageContain">
+                <img src="img/avatar_1.jpg" alt="">
+              </div>
+              <div class="textuserChat">
+                <h5>Michele</h5>
+              <p>Tutto fatto!...</p>
+              </div>
+            </div>
+            <div class="contactUserDate">
+              <p>10.50 15/11/2021</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- section of the chat where you can write to people -->
       <section class="chatBox">
+
+        <!-- username, pic profile on top chat -->
         <div class="userChat">
           <div class="userImage">
-            <img src="img/avatar_1.jpg" alt="">
+            <div class="userImageContain">
+              <img src="img/avatar_1.jpg" alt="">
+            </div>
+            <div class="textuserChat">
+              <h5>Michele</h5>
+              <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
+            </div>
           </div>
-          <div class="textuserChat">
-            <h5>Michele</h5>
-            <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
-          </div>
-
-          <div class="iconsTopUserChatSide">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
+            <div class="iconsTopUserChatSide">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
         </div>
+        
+        <!-- screen where you see messages -->
         <div class="chatScreen" >
-          <img src="img/mine.jpg" alt="">
+          <div class="greenChat">
+          <h6>Hai portato a spasso il cane?</h6>
+          <p>10.50 15/11/2021</p>
+          </div>
+          <div class="greenChat">
+            <h6>Ricordati di dargli da mangiare</h6>
+            <p>10.50 15/11/2021</p>
+          </div>
+          <div class="whiteChat">
+            <h6>Tutto fatto!</h6>
+            <p>10.50 15/11/2021</p>
+          </div>
         </div>
-        <div class="typeInput" ></div>
+
+        <!-- input ti write message -->
+        <div class="typing">
+          <i class="far fa-smile"></i>
+          <input type="text" placeholder="Scrivi un messaggio">
+          <i class="fas fa-microphone"></i>
+        </div>
       </section>
     </div>
 

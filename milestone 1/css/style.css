@@ -5,9 +5,10 @@
 }
 
 body {
-  height: 97.5vh;
+  height: 100vh;
   background: linear-gradient(180deg, #249688 16vh , #dddbd1 0%, #d2dbdb 100%);
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 /* textx: titles and p in general, all text below*/
@@ -15,15 +16,25 @@ h5 {
  font-weight: 600;
 }
 
-.userChat h5 {
+.userChat h5, .contactList h5 {
   font-weight: 500;
 }
 
 .notification h5 {
   font-weight: 500;
 }
+.textuserChat h5 {
+  font-weight: 600;
+  color: rgb(65, 64, 64)
+}
 
-.userChat p, .notification p {
+h6 {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(65, 64, 64)
+}
+
+.userChat p, .notification p, .contactListItem p, .contactUserDate p {
   font-size: 11px;
 }
 
@@ -32,27 +43,49 @@ h5 {
   color: rgba(0, 0, 0, .7);
 }
 
+.greenChat p, .whiteChat p {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  color: rgb(177,177,177);
+  font-size: 9px;
+}
 
 /* container wrapper */
 .wrapper {
   display: flex;
-  height: 93vh;
+  height: 93%;
   width: 80%;
   margin: 0 auto;
-  background-color: #ffff;
   margin-top: 20px;
 }
 
 /* top part where there's image and name user, either on the left anda right side */
 /* common classes */
-.user, .userChat {
+.userMe, .userChat {
   background-color: rgb(234,234,234);
 }
 
-/* all icons */
+/* USER IMAGE AND NAME */
+.userImage {
+  display: flex;
+  align-items: center;
+}
+
+.userImageContain {
+  height: 60px;
+  width: 60px;
+  padding: 8px;
+}
+
+.userImageContain img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* ALL ICONS */
 .iconsTopUser, .iconsTopUserChatSide {
-  position: absolute;
-  color: rgb(178,177,176);
+  color: rgb(177,177,177);
 }
 
 .iconsTopUser i, .iconsTopUserChatSide i {
@@ -75,25 +108,30 @@ h5 {
   color: #8edafc;
 }
 
-/* box of contact, where you find the name of the whatsapp's owner and list of contact you chatted with */
-.contactBox {
-  width: 40%;
-  background-color: blueviolet;
-}
-
-.user {
-  position: relative;
+.searchContactIcon {
   display: flex;
   align-items: center;
-  border-right: 1px solid rgb(178,177,176);
+  height: 30px;
+  width: 40px;
+  color: rgb(177,177,177);
+  background-color: #ffff;
+  border: 1.5px solid rgba(177,177,177, .3);
+  border-right: none;
+  padding-left: 12px;
 }
 
-.iconsTopUser {
-  right: 0;
+/* box of chats, where you find the name of the whatsapp's owner and list of contact you chatted with, inside of it notification, search bar for chats and chats contacts */
+.contactBox {
+  width: 40%;
+  background-color: #ffff;
+  overflow: hidden;
 }
 
-.contactList{
-  overflow: auto;
+.userMe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 2px solid rgba(177,177,177, .3);
 }
 
 .notification {
@@ -104,56 +142,106 @@ h5 {
 }
 
 .searchContact {
-  height: 40px;
-  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color:#ffff;
+}
+
+.searchContactInput {
+  height: 30px;
+  width: 95%;
+  background-color: #ffff;
+  border: 1.5px solid rgba(177,177,177, .3);
+  border-left: none;
 }
 
 .contactUser {
-  height: 70px;
+  height: 80%;
+  width: 96%;
   background-color: #ffff;
+  border: 2px solid rgba(177,177,177, .3);
+  border-bottom: none;
+  border-left: none;
+  overflow: auto;
 }
 
-/* user image and name */
-.userImage {
-  height: 60px;
-  width: 60px;
-  padding: 8px;
+.contactListItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
 }
 
-.userImage img{
-  width: 100%;
-  border-radius: 50%;
+.contactListItem:hover {
+  background-color: rgb(234,234,234);
+}
+
+.active {
+  background-color: rgb(234,234,234);
 }
 
 /* section of the chat where you write messages*/ 
 .chatBox {
   width: 60%;
-  background-color: rgb(226, 214, 43);
+  background-color: #ffff;
 }
 
 .userChat {
   display: flex;
   align-items: center;
-}
-
-.iconsTopUserChatSide {
-  right: 10%;
+  justify-content: space-between;
+  overflow-y: auto;
 }
 
 .chatScreen {
-  height: 72vh;
+  height: 75vh;
   width: 97%;
-
+  background-image: url('/milestone 1/img/mine.jpg');
+  padding: 58px;
 }
 
-.chatScreen img {
-  height: 100%;
-  width: 100%;
+.greenChat, .whiteChat {
+  position: relative;
+  clear: both;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 270px;
+  border-radius: 10px;
+  padding-left: 12px;
+  margin: 6px;
 }
 
-.typeInput {
-  height: 71px;
-  background-color: rgb(55, 47, 126);
+.greenChat{
+  float: right;
+  background-color: #d5f9bb;
+}
+
+.whiteChat{
+  float: left;
+  background-color: #ffff;
+}
+
+.typing{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  background-color: rgb(234,234,234);
+}
+
+.typing input {
+  width: 75%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.typing i {
+  font-size: 20px;
+  color: rgb(107,115,118);
 }
 
 
