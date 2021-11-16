@@ -6,33 +6,12 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(180deg, #249688 16vh , #dddbd1 0%, #d2dbdb 100%);
-  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #249688 14vh , #dddbd1 0%, #d2dbdb 100%);
+  font-family: 'Lato', sans-serif;
   overflow: hidden;
 }
 
 /* textx: titles and p in general, all text below*/
-h5 {
- font-weight: 600;
-}
-
-.userChat h5, .contactList h5 {
-  font-weight: 500;
-}
-
-.notification h5 {
-  font-weight: 500;
-}
-.textuserChat h5 {
-  font-weight: 600;
-  color: rgb(65, 64, 64)
-}
-
-h6 {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgb(65, 64, 64)
-}
 
 .userChat p, .notification p, .contactListItem p, .contactUserDate p {
   font-size: 11px;
@@ -54,10 +33,11 @@ h6 {
 /* container wrapper */
 .wrapper {
   display: flex;
-  height: 93%;
+  height: 95vh;
   width: 80%;
+  min-width: 950px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 /* top part where there's image and name user, either on the left anda right side */
@@ -124,7 +104,6 @@ h6 {
 .contactBox {
   width: 40%;
   background-color: #ffff;
-  overflow: hidden;
 }
 
 .userMe {
@@ -155,16 +134,17 @@ h6 {
   background-color: #ffff;
   border: 1.5px solid rgba(177,177,177, .3);
   border-left: none;
+  outline-style: none;
 }
 
 .contactUser {
-  height: 80%;
+  height: calc(100% - 186px);
   width: 96%;
   background-color: #ffff;
   border: 2px solid rgba(177,177,177, .3);
   border-bottom: none;
   border-left: none;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .contactListItem{
@@ -179,7 +159,7 @@ h6 {
 }
 
 .active {
-  background-color: rgb(234,234,234);
+  background-color: rgb(177,177,177);
 }
 
 /* section of the chat where you write messages*/ 
@@ -196,10 +176,11 @@ h6 {
 }
 
 .chatScreen {
-  height: 75vh;
+  height: calc(100% - 123px);
   width: 97%;
   background-image: url('/milestone1/img/mine.jpg');
   padding: 58px;
+  overflow-y: auto;
 }
 
 .greenChat, .whiteChat {
@@ -237,6 +218,7 @@ h6 {
   padding: 16px;
   border-radius: 10px;
   border: none;
+  outline-style: none;
 }
 
 .typing i {

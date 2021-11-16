@@ -3,6 +3,12 @@ const root = new Vue({
   el: '#root',
 
   data: {
+
+    userMe: {
+      name: 'Nome Utente',
+      avatar: 'img/avatar_io.jpg',
+    },
+
     contacts: [
       {
         name: 'Michele',
@@ -10,91 +16,86 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10.50 15/11/2021',
-            text: 'Hai portato a spasso il cane?',
+            date: '10/01/2020 15:30:55',
+            message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10.50 15/11/2021',
-            text: 'Ricordati di dargli da mangiare',
-            status: 'sent'
+            date: '10/01/2020 15:50:00',
+            message: 'Ricordati di dargli da mangiare',
+            tatus: 'sent'
           },
           {
-            date: '10.50 15/11/2021',
-            text: 'Tutto fatto!',
+            date: '10/01/2020 16:15:22',
+            message: 'Tutto fatto!',
             status: 'received'
-          },
+          }
         ],
       },
       {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: 'img/avatar_2.jpg',
         visible: true,
         messages: [
           {
-            date: '',
-            text: '',
+            date: '20/03/2020 16:30:00',
+            message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '',
-            text: '',
-            status: 'sent'
-          },
-          {
-            date: '10.50 15/11/2021',
-            text: '',
+            date: '20/03/2020 16:30:55',
+            message: 'Bene grazie! Stasera ci vediamo?',
             status: 'received'
           },
+          {
+            date: '20/03/2020 16:35:00',
+            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+            status: 'received'
+          }
         ],
       },
       {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: 'img/avatar_3.jpg',
         visible: true,
         messages: [
           {
-            date: '',
-            text: '',
-            status: 'sent'
-          },
-          {
-            date: '',
-            text: '',
-            status: 'sent'
-          },
-          {
-            date: '',
-            text: '',
+            date: '28/03/2020 10:10:40',
+            message: 'La Marianna va in campagna',
             status: 'received'
           },
+          {
+            date: '28/03/2020 10:20:10',
+            message: 'Sicuro di non aver sbagliato chat?',
+            status: 'sent'
+          },
+          {
+            date: '28/03/2020 16:15:22',
+            message: 'Ah scusa!',
+            status: 'received'
+          }
         ],
       },
       {
         name: 'Luisa',
-        avatar: '_4',
+        avatar: 'img/avatar_6.jpg',
         visible: true,
         messages: [
           {
-            date: '',
-            text: '',
+            date: '10/01/2020 15:30:55',
+            message: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent'
           },
           {
-            date: '',
-            text: '',
-            status: 'sent'
-          },
-          {
-            date: '',
-            text: '',
+            date: '10/01/2020 15:50:00',
+            message: 'Si, ma preferirei andare al cinema',
             status: 'received'
-          },
+          }
         ],
       },
       {
         name: 'Angela',
-        avatar: '_5',
+        avatar: 'img/avatar_io.jpg',
         visible: true,
         messages: [
           {
@@ -116,7 +117,7 @@ const root = new Vue({
       },
       {
         name: 'Lino',
-        avatar: '_6',
+        avatar: 'img/avatar_8.jpg',
         visible: true,
         messages: [
           {
@@ -138,7 +139,7 @@ const root = new Vue({
       },
       {
         name: 'Patrizio',
-        avatar: '_7',
+        avatar: 'img/avatar_4.jpg',
         visible: true,
         messages: [
           {
@@ -160,7 +161,7 @@ const root = new Vue({
       },
       {
         name: 'Simone',
-        avatar: '_8',
+        avatar: 'img/avatar_7.jpg',
         visible: true,
         messages: [
           {
@@ -182,7 +183,7 @@ const root = new Vue({
       },
       {
         name: 'Matteo',
-        avatar: '_9',
+        avatar: 'img/avatar_5.jpg',
         visible: true,
         messages: [
           {

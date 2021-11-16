@@ -7,19 +7,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -37,9 +28,9 @@
         <div class="userMe">
           <div class="userImage">
             <div class="userImageContain">
-              <img src="img/avatar_io.jpg" alt="">
+              <img :src="userMe.avatar" alt="">
             </div>
-            <h5>Nome Utente</h5>
+            <h5>{{userMe.name}}</h5>
           </div>
 
           <div class="iconsTopUser">
@@ -55,7 +46,7 @@
             <i class="fas fa-bell-slash"></i>
           </div>
 
-          <div class="textUser">
+          <div class="textNotification">
             <h5>Ricevi notifiche dei nuovi messaggi</h5>
             <p>Attiva notifiche desktop</p>
           </div>
@@ -84,7 +75,7 @@
               </div>
             </div>
             <div class="contactUserDate">
-              <p>10.50 15/11/2021</p>
+              <p>10:50 15/11/2021</p>
             </div>
           </div>
         </div>
@@ -114,16 +105,16 @@
         <!-- screen where you see messages -->
         <div class="chatScreen" >
           <div class="greenChat">
-          <h6>Hai portato a spasso il cane?</h6>
-          <p>10.50 15/11/2021</p>
+          <h5>Hai portato a spasso il cane?</h5>
+          <p>10:50 15/11/2021</p>
           </div>
           <div class="greenChat">
-            <h6>Ricordati di dargli da mangiare</h6>
-            <p>10.50 15/11/2021</p>
+            <h5>Ricordati di dargli da mangiare</h5>
+            <p>10:50 15/11/2021</p>
           </div>
           <div class="whiteChat">
-            <h6>Tutto fatto!</h6>
-            <p>10.50 15/11/2021</p>
+            <h5>Tutto fatto!</h5>
+            <p>10:50 15/11/2021</p>
           </div>
         </div>
 
