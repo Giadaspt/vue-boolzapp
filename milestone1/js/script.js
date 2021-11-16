@@ -209,4 +209,4 @@ const root = new Vue({
 
   },
   
-});
+})
