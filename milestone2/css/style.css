@@ -172,7 +172,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow-y: auto;
+  height: 60px;
 }
 
 .chatScreen {

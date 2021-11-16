@@ -89,36 +89,46 @@
         <!-- username, pic profile on top chat -->
         <div class="userChat">
           <div 
-        
+          v-if="indexItem >= 0"
           class="userImage">
             <div class="userImageContain">
-              <img src="img/avatar_1.jpg" alt="">
+              <img :src="contacts[indexItem].avatar" alt="">
             </div>
             <div class="textuserChat">
-              <h5>Michele</h5>
+              <h5>{{contacts[indexItem].name}}</h5>
               <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
             </div>
+            <!-- <h5 v-else > Comincia a chattare </h5> -->
           </div>
-            <div class="iconsTopUserChatSide">
-              <i class="fas fa-search"></i>
-              <i class="fas fa-paperclip"></i>
-              <i class="fas fa-ellipsis-v"></i>
-            </div>
+          
+
+          <div class="iconsTopUserChatSide">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
         </div>
         
         <!-- screen where you see messages -->
-        <div class="chatScreen" >
-          <div class="greenChat">
-          <h5>Hai portato a spasso il cane?</h5>
-          <p>10:50 15/11/2021</p>
-          </div>
-          <div class="greenChat">
-            <h5>Ricordati di dargli da mangiare</h5>
+        <div 
+        v-for=""
+        class="chatScreen" >
+          <div class="rightGreenChat">
+            <div class="greenChat">
+            <h5>Hai portato a spasso il cane?</h5>
             <p>10:50 15/11/2021</p>
+            </div>
+            <div class="greenChat">
+              <h5>Ricordati di dargli da mangiare</h5>
+              <p>10:50 15/11/2021</p>
+            </div>
           </div>
-          <div class="whiteChat">
-            <h5>Tutto fatto!</h5>
-            <p>10:50 15/11/2021</p>
+
+          <div class="leftWhiteChat">
+            <div class="whiteChat">
+              <h5>Tutto fatto!</h5>
+              <p>10:50 15/11/2021</p>
+            </div>
           </div>
         </div>
 
