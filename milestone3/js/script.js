@@ -202,14 +202,29 @@ const root = new Vue({
 
     indexItem: -1,
     isActive: true,
+    newStr: '',
   },
+
   
   methods: {
     showIndex(index){
       this.indexItem = index;
-      console.log('indice', index);
+      // console.log('indice', index);
     },
-    
+
+    addText(){
+      let message = this.contacts[this.indexItem].messages;
+      message.push({
+        date: '10/01/2020 15:50:00',
+        message: this.newStr,
+        status: 'sent'
+      });
+      this.newStr= '';
+    },
+
+    answerOk(){
+      setTimeout()
+    }
   },
   
-})
+});
