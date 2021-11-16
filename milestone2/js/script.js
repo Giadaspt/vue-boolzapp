@@ -23,7 +23,7 @@ const root = new Vue({
           {
             date: '10/01/2020 15:50:00',
             message: 'Ricordati di dargli da mangiare',
-            tatus: 'sent'
+            status: 'sent'
           },
           {
             date: '10/01/2020 16:15:22',

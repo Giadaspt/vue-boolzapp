@@ -91,43 +91,50 @@
           <div 
           v-if="indexItem >= 0"
           class="userImage">
-            <div class="userImageContain">
-              <img :src="contacts[indexItem].avatar" alt="">
-            </div>
-            <div class="textuserChat">
-              <h5>{{contacts[indexItem].name}}</h5>
-              <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
-            </div>
-            <!-- <h5 v-else > Comincia a chattare </h5> -->
+          <div class="userImageContain">
+            <img :src="contacts[indexItem].avatar" alt="">
           </div>
-          
-
-          <div class="iconsTopUserChatSide">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
+          <div class="textuserChat">
+            <h5>{{contacts[indexItem].name}}</h5>
+            <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
           </div>
         </div>
+        <div class="iconsTopUserChatSide">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div>
+      <!-- <div v-else > Comincia a chattare </div> -->
         
         <!-- screen where you see messages -->
         <div 
-        v-for=""
+        v-if=" indexItem >= 0"
         class="chatScreen" >
-          <div class="rightGreenChat">
-            <div class="greenChat">
-            <h5>Hai portato a spasso il cane?</h5>
-            <p>10:50 15/11/2021</p>
+          <div 
+          v-for="(message, index) in contacts[indexItem].messages"
+          class="rightGreenChat">
+            <div 
+
+            :class=""
+            class="greenChat">
+            <h5>{{message.message}} {{message.status}}</h5>
+            <p>{{message.date}}</p>
             </div>
-            <div class="greenChat">
+            <!-- <div class="greenChat">
               <h5>Ricordati di dargli da mangiare</h5>
               <p>10:50 15/11/2021</p>
-            </div>
+            </div> -->
           </div>
 
-          <div class="leftWhiteChat">
-            <div class="whiteChat">
-              <h5>Tutto fatto!</h5>
-              <p>10:50 15/11/2021</p>
+          <div 
+          v-for="(message, index) in contacts[indexItem].messages"
+          class="leftWhiteChat">
+            <div 
+            :class="whitechat"
+            class="whiteChat">
+              <h5>{{message.message}} {{message.status}}</h5>
+              <p>{{message.date}}</p>
             </div>
           </div>
         </div>
