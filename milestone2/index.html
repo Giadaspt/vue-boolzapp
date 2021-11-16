@@ -64,6 +64,8 @@
         <div class="contactUser">
           <div 
           v-for="(item, index) in contacts"
+          @click="{active: [showIndex(index), isActive = !isActive]}" 
+          :class="{active: index === indexItem }"
           class="contactListItem">
             <div class="userImage">
               <div class="userImageContain">
@@ -86,7 +88,9 @@
 
         <!-- username, pic profile on top chat -->
         <div class="userChat">
-          <div class="userImage">
+          <div 
+        
+          class="userImage">
             <div class="userImageContain">
               <img src="img/avatar_1.jpg" alt="">
             </div>

@@ -204,10 +204,16 @@ const root = new Vue({
         ],
       },
     ],
+
+    indexItem: -1,
+    isActive: true,
   },
-
+  
   methods: {
-
+    showIndex(index){
+      this.indexItem = index;
+      console.log('indice', index);
+    }
   },
   
 })
