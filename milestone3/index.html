@@ -111,20 +111,10 @@
         <!-- screen where you see messages -->
         <div class="chatScreen">
           <div 
+          :class="message.status"
           v-for="(message, index) in contacts[indexItem].messages">
-          <div
-            :class="message.status"
-            class="sent">
-              <h5>{{message.message}}</h5>
-              <p>{{message.date}}</p>
-            </div>
-            <div
-            :class="message.status"
-            v-if="received"
-            class="received">
-              <h5>{{message.message}}</h5>
-              <p>{{message.date}}</p>
-            </div>
+            <h5>{{message.message}}</h5>
+            <p>{{message.date}}</p>
           </div>
         </div>
 

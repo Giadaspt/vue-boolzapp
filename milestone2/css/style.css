@@ -183,7 +183,8 @@ body {
   overflow-y: auto;
 }
 
-.sent, .received{
+.sent{
+  float: right;
   position: relative;
   clear: both;
   display: flex;
@@ -193,15 +194,20 @@ body {
   border-radius: 10px;
   padding-left: 12px;
   margin: 6px;
-}
-
-.sent{
-  float: right;
   background-color: #d5f9bb;
 }
 
 .received{
   float: left;
+  position: relative;
+  clear: both;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 270px;
+  border-radius: 10px;
+  padding-left: 12px;
+  margin: 6px;
   background-color: #ffff;
 }
 

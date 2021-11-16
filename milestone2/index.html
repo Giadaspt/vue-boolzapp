@@ -108,24 +108,12 @@
       <!-- <div v-else > Comincia a chattare </div> -->
         
         <!-- screen where you see messages -->
-        <div
-        v-if=" indexItem >= 0" 
-        class="chatScreen">
+        <div class="chatScreen">
           <div 
+          :class="message.status"
           v-for="(message, index) in contacts[indexItem].messages">
-          <div
-            :class="message.status"
-            class="sent">
-              <h5>{{message.message}}</h5>
-              <p>{{message.date}}</p>
-            </div>
-            <div
-            v-if="received"
-            :class="message.status"
-            class="received">
-              <h5>{{message.message}}</h5>
-              <p>{{message.date}}</p>
-            </div>
+            <h5>{{message.message}}</h5>
+            <p>{{message.date}}</p>
           </div>
         </div>
 
