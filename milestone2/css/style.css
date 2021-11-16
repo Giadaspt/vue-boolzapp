@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #249688 14vh , #dddbd1 0%, #d2dbdb 100%);
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+/* textx: titles and p in general, all text below*/
+
+.userChat p, .notification p, .contactListItem p, .contactUserDate p {
+  font-size: 11px;
+}
+
+.notification p {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, .7);
+}
+
+.greenChat p, .whiteChat p {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  color: rgb(177,177,177);
+  font-size: 9px;
+}
+
+/* container wrapper */
+.wrapper {
+  display: flex;
+  height: 95vh;
+  width: 80%;
+  min-width: 950px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+/* top part where there's image and name user, either on the left anda right side */
+/* common classes */
+.userMe, .userChat {
+  background-color: rgb(234,234,234);
+}
+
+/* USER IMAGE AND NAME */
+.userImage {
+  display: flex;
+  align-items: center;
+}
+
+.userImageContain {
+  height: 60px;
+  width: 60px;
+  padding: 8px;
+}
+
+.userImageContain img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* ALL ICONS */
+.iconsTopUser, .iconsTopUserChatSide {
+  color: rgb(177,177,177);
+}
+
+.iconsTopUser i, .iconsTopUserChatSide i {
+  padding-right: 18px;
+}
+
+.notificationIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #ffff;
+  margin-right: 16px;
+}
+
+.notificationIcon i{
+  font-size: 20px;
+  color: #8edafc;
+}
+
+.searchContactIcon {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 40px;
+  color: rgb(177,177,177);
+  background-color: #ffff;
+  border: 1.5px solid rgba(177,177,177, .3);
+  border-right: none;
+  padding-left: 12px;
+}
+
+/* box of chats, where you find the name of the whatsapp's owner and list of contact you chatted with, inside of it notification, search bar for chats and chats contacts */
+.contactBox {
+  width: 40%;
+  background-color: #ffff;
+}
+
+.userMe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 2px solid rgba(177,177,177, .3);
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: #8edafc;
+  padding: 18px;
+}
+
+.searchContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color:#ffff;
+}
+
+.searchContactInput {
+  height: 30px;
+  width: 95%;
+  background-color: #ffff;
+  border: 1.5px solid rgba(177,177,177, .3);
+  border-left: none;
+  outline-style: none;
+}
+
+.contactUser {
+  height: calc(100% - 186px);
+  width: 96%;
+  background-color: #ffff;
+  border: 2px solid rgba(177,177,177, .3);
+  border-bottom: none;
+  border-left: none;
+  overflow-y: auto;
+}
+
+.contactListItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.contactListItem:hover {
+  background-color: rgb(234,234,234);
+}
+
+.active {
+  background-color: rgb(177,177,177);
+}
+
+/* section of the chat where you write messages*/ 
+.chatBox {
+  width: 60%;
+  background-color: #ffff;
+}
+
+.userChat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.chatScreen {
+  height: calc(100% - 123px);
+  width: 97%;
+  background-image: url('/milestone1/img/mine.jpg');
+  padding: 58px;
+  overflow-y: auto;
+}
+
+.greenChat, .whiteChat {
+  position: relative;
+  clear: both;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 270px;
+  border-radius: 10px;
+  padding-left: 12px;
+  margin: 6px;
+}
+
+.greenChat{
+  float: right;
+  background-color: #d5f9bb;
+}
+
+.whiteChat{
+  float: left;
+  background-color: #ffff;
+}
+
+.typing{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  background-color: rgb(234,234,234);
+}
+
+.typing input {
+  width: 75%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  outline-style: none;
+}
+
+.typing i {
+  font-size: 20px;
+  color: rgb(107,115,118);
+}
+
+

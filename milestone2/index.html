@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>vue-boolzapp</title>
+</head>
+
+<body>
+  <div id="root">
+
+    <div class="wrapper">
+      
+      <!-- section of the contact on the left side -->
+      <section class="contactBox">
+        <div class="userMe">
+          <div class="userImage">
+            <div class="userImageContain">
+              <img :src="userMe.avatar" alt="">
+            </div>
+            <h5>{{userMe.name}}</h5>
+          </div>
+
+          <div class="iconsTopUser">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+
+        <!-- notification -->
+        <div class="notification">
+          <div class="notificationIcon">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+
+          <div class="textNotification">
+            <h5>Ricevi notifiche dei nuovi messaggi</h5>
+            <p>Attiva notifiche desktop</p>
+          </div>
+        </div>
+
+        <!-- search bar upon contact list -->
+        <div class="searchContact">
+          <div class="searchContactIcon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
+
+        <!-- list of chats to chat -->
+        <div class="contactUser">
+          <div 
+          v-for="(item, index) in contacts"
+          class="contactListItem">
+            <div class="userImage">
+              <div class="userImageContain">
+                <img :src="item.avatar" alt="">
+              </div>
+              <div class="textuserChat">
+                <h5>{{item.name}}</h5>
+                <p>Tutto fatto!...</p>
+              </div>
+            </div>
+            <div class="contactUserDate">
+              <p>10:50 15/11/2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section of the chat where you can write to people -->
+      <section class="chatBox">
+
+        <!-- username, pic profile on top chat -->
+        <div class="userChat">
+          <div class="userImage">
+            <div class="userImageContain">
+              <img src="img/avatar_1.jpg" alt="">
+            </div>
+            <div class="textuserChat">
+              <h5>Michele</h5>
+              <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
+            </div>
+          </div>
+            <div class="iconsTopUserChatSide">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+        
+        <!-- screen where you see messages -->
+        <div class="chatScreen" >
+          <div class="greenChat">
+          <h5>Hai portato a spasso il cane?</h5>
+          <p>10:50 15/11/2021</p>
+          </div>
+          <div class="greenChat">
+            <h5>Ricordati di dargli da mangiare</h5>
+            <p>10:50 15/11/2021</p>
+          </div>
+          <div class="whiteChat">
+            <h5>Tutto fatto!</h5>
+            <p>10:50 15/11/2021</p>
+          </div>
+        </div>
+
+        <!-- input ti write message -->
+        <div class="typing">
+          <i class="far fa-smile"></i>
+          <input type="text" placeholder="Scrivi un messaggio">
+          <i class="fas fa-microphone"></i>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="/milestone2/js/script.js"></script>
+</body>
+
+</html>
