@@ -213,7 +213,8 @@ const root = new Vue({
     showIndex(index){
       this.indexItem = index;
       console.log('indice', index);
-    }
+    },
+    
   },
   
 })

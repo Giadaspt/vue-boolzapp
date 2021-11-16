@@ -113,10 +113,9 @@
         class="chatScreen" >
           <div 
           v-for="(message, index) in contacts[indexItem].messages"
+          :class="{'sent': message.status}"
           class="rightGreenChat">
             <div 
-
-            :class=""
             class="greenChat">
             <h5>{{message.message}} {{message.status}}</h5>
             <p>{{message.date}}</p>
@@ -129,9 +128,9 @@
 
           <div 
           v-for="(message, index) in contacts[indexItem].messages"
+          :class="{'received': message.status}"
           class="leftWhiteChat">
             <div 
-            :class="whitechat"
             class="whiteChat">
               <h5>{{message.message}} {{message.status}}</h5>
               <p>{{message.date}}</p>
