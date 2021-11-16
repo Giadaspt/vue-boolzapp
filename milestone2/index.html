@@ -84,12 +84,12 @@
       </section>
 
       <!-- section of the chat where you can write to people -->
-      <section class="chatBox">
-
+      <section 
+      v-if="indexItem >= 0"
+      class="chatBox">
         <!-- username, pic profile on top chat -->
         <div class="userChat">
           <div 
-          v-if="indexItem >= 0"
           class="userImage">
           <div class="userImageContain">
             <img :src="contacts[indexItem].avatar" alt="">
@@ -108,31 +108,22 @@
       <!-- <div v-else > Comincia a chattare </div> -->
         
         <!-- screen where you see messages -->
-        <div 
-        v-if=" indexItem >= 0"
-        class="chatScreen" >
+        <div
+        v-if=" indexItem >= 0" 
+        class="chatScreen">
           <div 
-          v-for="(message, index) in contacts[indexItem].messages"
-          :class="{'sent': message.status}"
-          class="rightGreenChat">
-            <div 
-            class="greenChat">
-            <h5>{{message.message}} {{message.status}}</h5>
-            <p>{{message.date}}</p>
+          v-for="(message, index) in contacts[indexItem].messages">
+          <div
+            :class="message.status"
+            class="sent">
+              <h5>{{message.message}}</h5>
+              <p>{{message.date}}</p>
             </div>
-            <!-- <div class="greenChat">
-              <h5>Ricordati di dargli da mangiare</h5>
-              <p>10:50 15/11/2021</p>
-            </div> -->
-          </div>
-
-          <div 
-          v-for="(message, index) in contacts[indexItem].messages"
-          :class="{'received': message.status}"
-          class="leftWhiteChat">
-            <div 
-            class="whiteChat">
-              <h5>{{message.message}} {{message.status}}</h5>
+            <div
+            v-if="received"
+            :class="message.status"
+            class="received">
+              <h5>{{message.message}}</h5>
               <p>{{message.date}}</p>
             </div>
           </div>

@@ -22,7 +22,7 @@ body {
   color: rgba(0, 0, 0, .7);
 }
 
-.greenChat p, .whiteChat p {
+.sent p, .received p {
   position: absolute;
   right: 7px;
   bottom: 5px;
@@ -183,7 +183,7 @@ body {
   overflow-y: auto;
 }
 
-.greenChat , .whiteChat, .sent, .received {
+.sent, .received{
   position: relative;
   clear: both;
   display: flex;
@@ -195,12 +195,12 @@ body {
   margin: 6px;
 }
 
-.greenChat, .sent{
+.sent{
   float: right;
   background-color: #d5f9bb;
 }
 
-.whiteChat, .received{
+.received{
   float: left;
   background-color: #ffff;
 }
