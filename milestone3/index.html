@@ -76,7 +76,8 @@
                 <p>Tutto fatto!...</p>
               </div>
             </div>
-            <div class="contactUserDate">
+            <div 
+            class="contactUserDate">
               <p>10:50 15/11/2021</p>
             </div>
           </div>
@@ -108,9 +109,7 @@
       <!-- <div v-else > Comincia a chattare </div> -->
         
         <!-- screen where you see messages -->
-        <div
-        v-if=" indexItem >= 0" 
-        class="chatScreen">
+        <div class="chatScreen">
           <div 
           v-for="(message, index) in contacts[indexItem].messages">
           <div
@@ -120,8 +119,8 @@
               <p>{{message.date}}</p>
             </div>
             <div
-            v-if="received"
             :class="message.status"
+            v-if="received"
             class="received">
               <h5>{{message.message}}</h5>
               <p>{{message.date}}</p>
@@ -132,7 +131,10 @@
         <!-- input ti write message -->
         <div class="typing">
           <i class="far fa-smile"></i>
-          <input type="text" placeholder="Scrivi un messaggio">
+          <input 
+          @keyup.13="addText"
+          v-model="newStr"
+          type="text" placeholder="Scrivi un messaggio">
           <i class="fas fa-microphone"></i>
         </div>
       </section>
@@ -140,7 +142,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="/milestone3/js/script.js"></script>
+  <script src="milestone3/js/script.js"></script>
 </body>
 
 </html>
