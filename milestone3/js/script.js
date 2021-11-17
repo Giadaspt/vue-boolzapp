@@ -216,14 +216,28 @@ const root = new Vue({
       let message = this.contacts[this.indexItem].messages;
       message.push({
         date: this.getDate(),
-        message: this.newStr,
-        status: 'sent'
+        message: this.newStr ,
+        status: 'sent',
       });
+      
       this.newStr= '';
+
+      this.answerOk();
+    
     },
 
     answerOk(){
-      setTimeout()
+      let message = this.contacts[this.indexItem].messages;
+
+      setTimeout(function() {
+        message.push({
+        date: this.getDate(),
+        message: 'Ok',
+        status: 'received'
+      });
+
+      console.log('timeout funct',this.answerOk);
+      }, 3000);
     },
 
     lastMessage(index){

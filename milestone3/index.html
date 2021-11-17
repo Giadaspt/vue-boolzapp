@@ -28,7 +28,7 @@
         <div class="userMe">
           <div class="userImage">
             <div class="userImageContain">
-              <img :src="userMe.avatar" alt="{{userMe.name}}">
+              <img :src="userMe.avatar" alt="userMe.name">
             </div>
             <h5>{{userMe.name}}</h5>
           </div>
@@ -123,6 +123,7 @@
           <i class="far fa-smile"></i>
           <input 
           @keyup.13="addText"
+     
           v-model="newStr"
           type="text" placeholder="Scrivi un messaggio">
           <i class="fas fa-microphone"></i>
