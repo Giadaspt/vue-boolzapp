@@ -13,11 +13,8 @@ body {
 
 /* textx: titles and p in general, all text below*/
 
-.userChat p, .notification p, .contactListItem p, .contactUserDate p {
-  font-size: 11px;
-}
-
 .notification p {
+  font-size: 11px;
   text-decoration: underline;
   color: rgba(0, 0, 0, .7);
 }

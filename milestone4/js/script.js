@@ -255,6 +255,7 @@ const root = new Vue({
       return messageLast;
     },
 
+
     getDate(){
    
       let today = new Date().toLocaleDateString();
@@ -263,6 +264,24 @@ const root = new Vue({
       let date = now + ' ' + today;
       return date;
     },
+
+
+    searchContact(){
+      let firstname = this.contatcs[this.indexItem].name;
+      console.log(firstname);
+
+      let nameLetter = firstname.spit();
+      console.log(nameLetter);
+
+    //   for(let i = 0; i < firstname.length ; i++){
+    //     let nameLetter = firstname.toLocaleLowerCase();
+    //     nameLetter = firstname.split(firstname.lenght);
+    //     console.log(nameLetter);
+    //  }
+    
+    },
+      
+    
   },
   
 });

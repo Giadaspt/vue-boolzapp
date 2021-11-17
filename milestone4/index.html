@@ -57,7 +57,10 @@
           <div class="searchContactIcon">
             <i class="fas fa-search"></i>
           </div>
-          <input class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
+          <input 
+          :class="searchContact"
+          
+          class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
 
         <!-- list of chats to chat -->
@@ -73,12 +76,12 @@
               </div>
               <div class="textuserChat">
                 <h5>{{item.name}}</h5>
-                <p>{{lastMessage(index)}}</p>
+                <small>{{lastMessage(index)}}</small>
               </div>
             </div>
             <div 
             class="contactUserDate">
-              <p>{{getDate()}}</p>
+              <small>{{getDate()}}</small>
             </div>
           </div>
         </div>
@@ -97,7 +100,7 @@
           </div>
           <div class="textuserChat">
             <h5>{{contacts[indexItem].name}}</h5>
-            <p>Ultimo accesso oggi alle {{getDate()}}</p>
+            <small>Ultimo accesso oggi alle {{getDate()}}</small>
           </div>
         </div>
         <div class="iconsTopUserChatSide">
