@@ -213,8 +213,13 @@ const root = new Vue({
       // console.log('indice', index);
     },
 
-    addText(){
+    addText( ){
+      
       let message = this.contacts[this.indexItem].messages;
+
+      if(this.newStr.length === 0 || !this.newStr.trim().length){
+        return
+      }
 
       message.push({
         date: this.getDate(),
@@ -225,11 +230,6 @@ const root = new Vue({
       this.newStr= '';
       this.answerOk();
 
-      //DA FINIRE//
-      if(this.newStr.length === 0){
-        console.log('linea vuota');
-      }
-    
     },
 
     answerOk(){

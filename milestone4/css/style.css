@@ -186,7 +186,7 @@ body {
   clear: both;
   display: flex;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
   width: 270px;
   border-radius: 10px;
   padding-left: 12px;
@@ -200,7 +200,7 @@ body {
   clear: both;
   display: flex;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
   width: 270px;
   border-radius: 10px;
   padding-left: 12px;
