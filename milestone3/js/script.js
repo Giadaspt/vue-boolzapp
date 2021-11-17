@@ -228,16 +228,19 @@ const root = new Vue({
 
     answerOk(){
       let message = this.contacts[this.indexItem].messages;
+      let dateTime = this.getDate();
 
       setTimeout(function() {
         message.push({
-        date: this.getDate(),
+        date: dateTime,
         message: 'Ok',
         status: 'received'
       });
 
       console.log('timeout funct',this.answerOk);
       }, 3000);
+      
+      
     },
 
     lastMessage(index){
