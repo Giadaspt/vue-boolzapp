@@ -58,15 +58,17 @@
             <i class="fas fa-search"></i>
           </div>
           <input 
-          :class="searchContact"
+          @keyup="searchContact()"
+          v-model="value"
           
           class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
-
+       
         <!-- list of chats to chat -->
         <div class="contactUser">
           <div 
           v-for="(item, index) in contacts"
+          v-if="item.visible == true"
           @click="{active: [showIndex(index), isActive = !isActive]}" 
           :class="{active: index === indexItem }"
           class="contactListItem">

@@ -203,6 +203,7 @@ const root = new Vue({
     indexItem: -1,
     isActive: true,
     newStr: '',
+    value: '',
   },
 
   
@@ -267,18 +268,25 @@ const root = new Vue({
 
 
     searchContact(){
-      let firstname = this.contatcs[this.indexItem].name;
-      console.log(firstname);
+      console.log('sono search contact');
 
-      let nameLetter = firstname.spit();
-      console.log(nameLetter);
+      console.log(this.value);
 
-    //   for(let i = 0; i < firstname.length ; i++){
-    //     let nameLetter = firstname.toLocaleLowerCase();
-    //     nameLetter = firstname.split(firstname.lenght);
-    //     console.log(nameLetter);
-    //  }
-    
+      this.contacts.forEach(contact => { 
+              
+        if (contact.name.includes(this.value)){
+          contact.visible = true;
+          console.log('bbbbbbbbb',this.value);
+        
+        } else {
+          contact.visible = false;
+          console.log('cccccccc',this.value);
+        }
+  
+        
+      });
+
+      
     },
       
     
