@@ -16,17 +16,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           }
@@ -38,17 +38,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:35:00',
+            date: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           }
@@ -60,17 +60,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '28/03/2020 10:10:40',
+            date: '10:10:40 28/03/2020 ',
             message: 'La Marianna va in campagna',
             status: 'received'
           },
           {
-            date: '28/03/2020 10:20:10',
+            date: '10:20:10 28/03/2020 ',
             message: 'Sicuro di non aver sbagliato chat?',
             status: 'sent'
           },
           {
-            date: '28/03/2020 16:15:22',
+            date: '16:15:22 28/03/2020 ',
             message: 'Ah scusa!',
             status: 'received'
           }
@@ -82,12 +82,12 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Si, ma preferirei andare al cinema',
             status: 'received'
           }
@@ -99,17 +99,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           },
@@ -121,17 +121,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            ddate: '20/03/2020 16:35:00',
+            ddate: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           },
@@ -143,12 +143,12 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Si, ma preferirei andare al cinema',
             status: 'received'
           },
@@ -160,17 +160,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           },
@@ -182,17 +182,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:35:00',
+            date: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           },
@@ -215,7 +215,7 @@ const root = new Vue({
     addText(){
       let message = this.contacts[this.indexItem].messages;
       message.push({
-        date: '10/01/2020 15:50:00',
+        date: this.getDate(),
         message: this.newStr,
         status: 'sent'
       });
@@ -224,7 +224,25 @@ const root = new Vue({
 
     answerOk(){
       setTimeout()
-    }
+    },
+
+    lastMessage(index){
+
+      let messageLast = this.contacts[index].messages[this.contacts[index].messages.length -1].message;
+      messageLast = messageLast.slice(0,12)+'...';
+      // console.log(messageLast);
+      
+      return messageLast;
+    },
+
+    getDate(){
+   
+      let today = new Date().toLocaleDateString();
+      let now = new Date().toLocaleTimeString();
+
+      let date = now + ' ' + today;
+      return date;
+    },
   },
   
 });

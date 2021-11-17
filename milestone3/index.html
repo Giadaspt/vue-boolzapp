@@ -28,7 +28,7 @@
         <div class="userMe">
           <div class="userImage">
             <div class="userImageContain">
-              <img :src="userMe.avatar" alt="">
+              <img :src="userMe.avatar" alt="{{userMe.name}}">
             </div>
             <h5>{{userMe.name}}</h5>
           </div>
@@ -73,12 +73,12 @@
               </div>
               <div class="textuserChat">
                 <h5>{{item.name}}</h5>
-                <p>Tutto fatto!...</p>
+                <p>{{lastMessage(index)}}</p>
               </div>
             </div>
             <div 
             class="contactUserDate">
-              <p>10:50 15/11/2021</p>
+              <p>{{getDate()}}</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@
           </div>
           <div class="textuserChat">
             <h5>{{contacts[indexItem].name}}</h5>
-            <p>Ultimo accesso oggi alle 10.50 15/11/2021</p>
+            <p>Ultimo accesso oggi alle {{getDate()}}</p>
           </div>
         </div>
         <div class="iconsTopUserChatSide">
