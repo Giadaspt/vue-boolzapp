@@ -120,16 +120,21 @@
         <div class="chatScreen">
           <div 
             v-for="(message, index) in contacts[indexItem].messages"
-            @mouseleave="hover = null"
-            @mouseover="hover = index"
             :class="message.status">
-            <i
-            v-show="hover"
-            v-if="index == indexItem"
-            :class="mouseHover()"
-            class="fas fa-chevron-down"></i>
-            <h5>{{message.message}}</h5>
+            <i 
+            @click=" [mouseHover(), show = !show] "
+            class="fas fa-chevron-down chevron">
+            </i>
+           
+            <h5>{{message.message}} </h5>
             <p>{{message.date}}</p>
+            
+          </div>
+          <div 
+          v-show="show"
+          class="box">
+            <p>Message info</p>
+            <p>Delete message</p>
           </div>
         </div>
 

@@ -209,7 +209,7 @@ const root = new Vue({
     isActive: true,
     newStr: '',
     value: '',
-    hover: null,
+    show: true,
   },
 
   methods: {
@@ -282,9 +282,9 @@ const root = new Vue({
       let count = 0;
     
       for(let i = 0; i < message.length; i++){
-        count++;
-
+        message[i];
         console.log('io sono count',count++);
+
         console.log('io sono message di i',message[i]);
       }     
   

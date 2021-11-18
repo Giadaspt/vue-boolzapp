@@ -147,7 +147,7 @@ body {
 
 .contactUser {
   height: calc(100% - 186px);
-  width: 96%;
+  width: 100%;
   background-color: #ffff;
   border: 2px solid rgba(177,177,177, .3);
   border-bottom: none;
@@ -203,12 +203,29 @@ body {
   overflow-y: auto;
 }
 
-.fa-chevron-down {
+.chevron{
   position: absolute;
   top: 14px;
   right: 12px;
   color: rgb(177,177,177);
-  cursor: pointer;
+  /* display: none; */
+
+}
+
+/* .chatScreen .chevron:hover{
+  display: block;
+
+} */
+
+.box {
+  text-align: center;
+  line-height: 30px;
+  width: 150px;
+  background-color: blueviolet;
+}
+
+.box p:hover{
+  background-color: rgb(234,234,234);
 }
 
 .sent {
