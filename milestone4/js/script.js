@@ -282,8 +282,10 @@ const root = new Vue({
       let count = 0;
     
       for(let i = 0; i < message.length; i++){
-        console.log(count++);
-        console.log(message[i]);
+        count++;
+
+        console.log('io sono count',count++);
+        console.log('io sono message di i',message[i]);
       }     
   
       // console.log('io sono message',message);
