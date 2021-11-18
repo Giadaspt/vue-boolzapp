@@ -119,8 +119,16 @@
         <!-- here to see the messages of the chat -->
         <div class="chatScreen">
           <div 
-            :class="message.status"
-            v-for="(message, index) in contacts[indexItem].messages">
+            v-for="(message, index) in contacts[indexItem].messages"
+            @mouseleave="hover = false"
+            @mouseover="hover = true"
+            :class="message.status">
+            <i
+            v-for="(type, index) in message"
+            v-show="hover"
+            v-if="type, index"
+            :class="mouseHover(index)"
+            class="fas fa-chevron-down"></i>
             <h5>{{message.message}}</h5>
             <p>{{message.date}}</p>
           </div>

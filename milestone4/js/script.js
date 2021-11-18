@@ -209,6 +209,7 @@ const root = new Vue({
     isActive: true,
     newStr: '',
     value: '',
+    hover: true,
   },
 
   methods: {
@@ -275,6 +276,18 @@ const root = new Vue({
         }
       });
     },
+    
+    mouseHover(){
+      let mouse = this.contacts[this.indexItem].messages
+      
+      mouse.filter(index =>{
+        
+        mouse[index]
+        console.log('ok index',index);
+      });
+      console.log('io sono mouse',mouse);
+       return mouse
+    }
       
   },
   

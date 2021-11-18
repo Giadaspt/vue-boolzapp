@@ -176,7 +176,7 @@ body {
   width: 60%;
 }
 
-.welcomeSide img{
+.welcomeSide img {
   height: 100%;
   width: 100%;
 }
@@ -195,6 +195,7 @@ body {
 }
 
 .chatScreen {
+  position: relative;
   height: calc(100% - 123px);
   width: 99%;
   background-image: url('/milestone1/img/mine.jpg');
@@ -202,7 +203,15 @@ body {
   overflow-y: auto;
 }
 
-.sent{
+.fa-chevron-down {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  color: rgb(177,177,177);
+  cursor: pointer;
+}
+
+.sent {
   float: right;
   position: relative;
   clear: both;
@@ -214,9 +223,10 @@ body {
   padding-left: 12px;
   margin: 6px;
   background-color: #d5f9bb;
+  overflow-x: hidden;
 }
 
-.received{
+.received {
   float: left;
   position: relative;
   clear: both;
@@ -228,9 +238,10 @@ body {
   padding-left: 12px;
   margin: 6px;
   background-color: #ffff;
+  overflow-x: hidden;
 }
 
-.typing{
+.typing {
   display: flex;
   justify-content: space-around;
   align-items: center;
