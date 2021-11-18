@@ -9,6 +9,11 @@ const root = new Vue({
       avatar: 'img/avatar_io.jpg',
     },
 
+    welcome: {
+      bg: 'phone.jpg',
+      phrase: 'Keep your phone connected',
+    },
+
     contacts: [
       {
         name: 'Michele',
@@ -206,15 +211,12 @@ const root = new Vue({
     value: '',
   },
 
-  
   methods: {
     showIndex(index){
       this.indexItem = index;
-      // console.log('indice', index);
     },
 
     addText( ){
-      
       let message = this.contacts[this.indexItem].messages;
 
       if(this.newStr.length === 0 || !this.newStr.trim().length){
@@ -229,7 +231,6 @@ const root = new Vue({
       
       this.newStr= '';
       this.answerOk();
-
     },
 
     answerOk(){
@@ -243,12 +244,9 @@ const root = new Vue({
         status: 'received'
       });
       }, 3000);
-      
-      
     },
 
     lastMessage(index){
-
       let messageLast = this.contacts[index].messages[this.contacts[index].messages.length -1].message;
       messageLast = messageLast.slice(0,12)+'...';
       // console.log(messageLast);
@@ -256,9 +254,7 @@ const root = new Vue({
       return messageLast;
     },
 
-
     getDate(){
-   
       let today = new Date().toLocaleDateString();
       let now = new Date().toLocaleTimeString();
 
@@ -266,29 +262,20 @@ const root = new Vue({
       return date;
     },
 
-
     searchContact(){
-
       //console.log(this.value);
-
       this.contacts.forEach(contact => { 
               
         if (contact.name.toLowerCase().includes(this.value.toLowerCase())){
           contact.visible = true;
           console.log('bbbbbbbbb',this.value);
-        
         } else {
           contact.visible = false;
           console.log('cccccccc',this.value);
         }
-  
-        
       });
-
-      
     },
       
-    
   },
   
 });

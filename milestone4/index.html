@@ -23,7 +23,7 @@
 
     <div class="wrapper">
       
-      <!-- section of the contact on the left side -->
+      <!-- user owner of whatsapp ("my profile") -->
       <section class="contactBox">
         <div class="userMe">
           <div class="userImage">
@@ -52,26 +52,25 @@
           </div>
         </div>
 
-        <!-- search bar upon contact list -->
+        <!-- search bar upon contact list to search quickly for a contact to chat with -->
         <div class="searchContact">
           <div class="searchContactIcon">
             <i class="fas fa-search"></i>
           </div>
           <input 
-          @keyup="searchContact()"
-          v-model="value"
-          
-          class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
+            @keyup="searchContact()"
+            v-model="value"
+            class="searchContactInput" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
        
-        <!-- list of chats to chat -->
+        <!-- list of contacts to chat with -->
         <div class="contactUser">
           <div 
-          v-for="(item, index) in contacts"
-          v-if="item.visible == true"
-          @click="{active: [showIndex(index), isActive = !isActive]}" 
-          :class="{active: index === indexItem }"
-          class="contactListItem">
+            v-for="(item, index) in contacts"
+            v-if="item.visible == true"
+            @click="{active: [showIndex(index), isActive = !isActive]}" 
+            :class="{active: index === indexItem }"
+            class="contactListItem">
             <div class="userImage">
               <div class="userImageContain">
                 <img :src="item.avatar" alt="">
@@ -82,54 +81,58 @@
               </div>
             </div>
             <div 
-            class="contactUserDate">
+              class="contactUserDate">
               <small>{{getDate()}}</small>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- section of the chat where you can write to people -->
+      <!-- welcome screen before clicking on contatcs and start chatting -->
+      <section v-if="indexItem < 0"
+        class="welcomeSide">
+        <img :src="welcome.bg" alt="">
+        <h2>{{welcome.phrase}}</h2>
+      </section>
+
+      <!-- name and image upon the chat screen of the user you're chatting with -->
       <section 
-      v-if="indexItem >= 0"
-      class="chatBox">
-        <!-- username, pic profile on top chat -->
+        v-if="indexItem >= 0"
+        class="chatBox">
         <div class="userChat">
-          <div 
-          class="userImage">
-          <div class="userImageContain">
-            <img :src="contacts[indexItem].avatar" alt="">
+          <div class="userImage">
+            <div class="userImageContain">
+              <img :src="contacts[indexItem].avatar" alt="">
+            </div>
+            <div class="textuserChat">
+              <h5>{{contacts[indexItem].name}}</h5>
+              <small>Ultimo accesso oggi alle {{getDate()}}</small>
+            </div>
           </div>
-          <div class="textuserChat">
-            <h5>{{contacts[indexItem].name}}</h5>
-            <small>Ultimo accesso oggi alle {{getDate()}}</small>
+          <div class="iconsTopUserChatSide">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="iconsTopUserChatSide">
-          <i class="fas fa-search"></i>
-          <i class="fas fa-paperclip"></i>
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-      </div>
-      <!-- <div v-else > Comincia a chattare </div> -->
         
-        <!-- screen where you see messages -->
+        <!-- here to see the messages of the chat -->
         <div class="chatScreen">
           <div 
-          :class="message.status"
-          v-for="(message, index) in contacts[indexItem].messages">
+            :class="message.status"
+            v-for="(message, index) in contacts[indexItem].messages">
             <h5>{{message.message}}</h5>
             <p>{{message.date}}</p>
           </div>
         </div>
 
-        <!-- input ti write message -->
+        <!-- input to write message -->
         <div class="typing">
           <i class="far fa-smile"></i>
           <input 
-          @keyup.13="addText"
-          v-model="newStr"
-          type="text" placeholder="Scrivi un messaggio">
+            @keyup.13="addText"
+            v-model="newStr"
+            type="text" placeholder="Scrivi un messaggio">
           <i class="fas fa-microphone"></i>
         </div>
       </section>
