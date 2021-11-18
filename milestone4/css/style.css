@@ -174,7 +174,7 @@ body {
 
 .chatScreen {
   height: calc(100% - 123px);
-  width: 97%;
+  width: 99%;
   background-image: url('/milestone1/img/mine.jpg');
   padding: 58px;
   overflow-y: auto;

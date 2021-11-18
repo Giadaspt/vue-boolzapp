@@ -268,13 +268,12 @@ const root = new Vue({
 
 
     searchContact(){
-      console.log('sono search contact');
 
-      console.log(this.value);
+      //console.log(this.value);
 
       this.contacts.forEach(contact => { 
               
-        if (contact.name.includes(this.value)){
+        if (contact.name.toLowerCase().includes(this.value.toLowerCase())){
           contact.visible = true;
           console.log('bbbbbbbbb',this.value);
         
