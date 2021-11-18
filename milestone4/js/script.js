@@ -14,6 +14,11 @@ const root = new Vue({
       phrase: 'Keep your phone connected',
     },
 
+    undeChevronOnClick: {
+      info: 'Message info',
+      delete: 'Delete message' 
+    },
+
     contacts: [
       {
         name: 'Michele',
@@ -210,6 +215,7 @@ const root = new Vue({
     newStr: '',
     value: '',
     show: true,
+    itemIndex: -1,
   },
 
   methods: {
@@ -266,7 +272,6 @@ const root = new Vue({
     searchContact(){
       //console.log(this.value);
       this.contacts.forEach(contact => { 
-              
         if (contact.name.toLowerCase().includes(this.value.toLowerCase())){
           contact.visible = true;
           console.log('bbbbbbbbb',this.value);
@@ -277,20 +282,22 @@ const root = new Vue({
       });
     },
     
-    mouseHover(){
-      let message = this.contacts[this.indexItem].messages
-      let count = 0;
-    
-      for(let i = 0; i < message.length; i++){
-        message[i];
-        console.log('io sono count',count++);
+    mouseHover(index){
+      this.itemIndex = index
 
-        console.log('io sono message di i',message[i]);
-      }     
-  
-      // console.log('io sono message',message);
+      console.log('io sono message',index);
+      console.log('i message',this.itemIndex);
+    },
 
-    }
+    removeOnClick(index){
+      let message = this.contacts[index].messages;
+      console.log('message',message, index);
+
+      message.splice(index, 0);
+      console.log( message.splice(index));
+      console.log(index);
+
+    },
       
   },
   

@@ -119,22 +119,25 @@
         <!-- here to see the messages of the chat -->
         <div class="chatScreen">
           <div 
+          class="screen"
             v-for="(message, index) in contacts[indexItem].messages"
             :class="message.status">
             <i 
-            @click=" [mouseHover(), show = !show] "
+            @click="[mouseHover(index), show = !show]"
             class="fas fa-chevron-down chevron">
             </i>
-           
+            <div 
+              v-show="show"
+              v-if="itemIndex == index"
+              class="box">
+              <span>{{undeChevronOnClick.info}}</span>
+              <span
+              @click="removeOnClick(index)" >
+              {{undeChevronOnClick.delete}}</span>
+            </div>
             <h5>{{message.message}} </h5>
             <p>{{message.date}}</p>
             
-          </div>
-          <div 
-          v-show="show"
-          class="box">
-            <p>Message info</p>
-            <p>Delete message</p>
           </div>
         </div>
 
