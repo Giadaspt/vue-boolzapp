@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
+
   <title>vue-boolzapp</title>
 </head>
 
@@ -96,6 +97,7 @@
       </section>
 
       <!-- name and image upon the chat screen of the user you're chatting with -->
+      
       <section 
         v-if="indexItem >= 0"
         class="chatBox">
@@ -109,13 +111,16 @@
               <small>Ultimo accesso oggi alle {{getDate()}}</small>
             </div>
           </div>
+          
           <div class="iconsTopUserChatSide">
             <i class="fas fa-search"></i>
             <i class="fas fa-paperclip"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        
+          <!-- <div class="bgChatScreen">
+            <img src="img/bgChat.jpg" alt="">
+          </div> -->
         <!-- here to see the messages of the chat -->
         <div class="chatScreen">
           <div 
@@ -130,14 +135,17 @@
               v-show="show"
               v-if="itemIndex == index"
               class="box">
-              <span>{{undeChevronOnClick.info}}</span>
               <span
+                class="drop">
+                {{undeChevronOnClick.info}}
+              </span>
+              <span
+              class="drop"
               @click="removeOnClick(index)" >
               {{undeChevronOnClick.delete}}</span>
             </div>
             <h5>{{message.message}} </h5>
             <p>{{message.date}}</p>
-            
           </div>
         </div>
 
@@ -151,10 +159,14 @@
           <i class="fas fa-microphone"></i>
         </div>
       </section>
+      
     </div>
   </div>
 
+  <!-- Vue cdn -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- Javascript -->
   <script src="js/script.js"></script>
 </body>
 

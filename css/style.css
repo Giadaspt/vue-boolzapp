@@ -11,13 +11,19 @@ body {
   overflow: hidden;
 }
 
-/* textx: titles and p in general, all text below*/
-
-.userChat p, .notification p, .contactListItem p, .contactUserDate p {
-  font-size: 11px;
+/* container*/
+.wrapper {
+  display: flex;
+  height: 95vh;
+  width: 80%;
+  min-width: 950px;
+  margin: 0 auto;
+  margin-top: 16px;
 }
 
+/* text: titles and p, text in general*/
 .notification p {
+  font-size: 11px;
   text-decoration: underline;
   color: rgba(0, 0, 0, .7);
 }
@@ -30,18 +36,20 @@ body {
   font-size: 9px;
 }
 
-/* container wrapper */
-.wrapper {
-  display: flex;
-  height: 95vh;
-  width: 80%;
-  min-width: 950px;
-  margin: 0 auto;
-  margin-top: 16px;
+.welcomeSide h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #ffff;
+  background-color: coral;
+  text-align: center;
 }
 
-/* top part where there's image and name user, either on the left anda right side */
-/* common classes */
+/* user of whatsapp (profile) */
+
+/* in common classes */
 .userMe, .userChat {
   background-color: rgb(234,234,234);
 }
@@ -100,7 +108,7 @@ body {
   padding-left: 12px;
 }
 
-/* box of chats, where you find the name of the whatsapp's owner and list of contact you chatted with, inside of it notification, search bar for chats and chats contacts */
+/* box of chats, where you find the name of the whatsapp's profile owner and list of contacts and chats, inside of it notification, search bar for contact's chat*/
 .contactBox {
   width: 40%;
   background-color: #ffff;
@@ -139,7 +147,7 @@ body {
 
 .contactUser {
   height: calc(100% - 186px);
-  width: 96%;
+  width: 100%;
   background-color: #ffff;
   border: 2px solid rgba(177,177,177, .3);
   border-bottom: none;
@@ -162,10 +170,24 @@ body {
   background-color: rgb(177,177,177);
 }
 
-/* section of the chat where you write messages*/ 
+/* welcome page before strating chatting */
+.welcomeSide {
+  position: relative;
+  width: 60%;
+}
+
+.welcomeSide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* section of the chat where you write messages and get answered*/ 
 .chatBox {
   width: 60%;
-  background-color: #ffff;
+  height: 100%;
+  background: url("https://www.cityhires.com.ng/wp-content/uploads/2016/09/bg-whatsapp.jpg");
+  
 }
 
 .userChat {
@@ -177,41 +199,75 @@ body {
 
 .chatScreen {
   height: calc(100% - 123px);
-  width: 97%;
-  background-image: url('/milestone1/img/mine.jpg');
+  width: 99%;
   padding: 58px;
   overflow-y: auto;
 }
 
-.sent{
-  float: right;
+/* .bgChatScreen img{
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+} */
+
+.box {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  width: 135px;
+  text-align: center;
+  background-color: #ffff;
+  cursor: pointer;
+  border: .5px solid darkgray;
+  z-index: 999;
+} 
+
+.drop {
+  line-height: 30px;
+}
+
+.drop:hover {
+  background-color: rgba(114, 114, 114, 0.5);
+}
+
+.chevron {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  color: rgb(177,177,177);
+}
+
+.sent {
   position: relative;
+  float: right;
   clear: both;
   display: flex;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
   width: 270px;
   border-radius: 10px;
   padding-left: 12px;
   margin: 6px;
   background-color: #d5f9bb;
+  border: .2px solid rgba(128, 128, 128, 0.411);
 }
 
-.received{
-  float: left;
+.received {
   position: relative;
+  float: left;
   clear: both;
   display: flex;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
   width: 270px;
   border-radius: 10px;
   padding-left: 12px;
   margin: 6px;
   background-color: #ffff;
+  border: .2px solid rgba(128, 128, 128, 0.411);
 }
 
-.typing{
+.typing {
   display: flex;
   justify-content: space-around;
   align-items: center;

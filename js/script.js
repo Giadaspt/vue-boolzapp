@@ -9,6 +9,16 @@ const root = new Vue({
       avatar: 'img/avatar_io.jpg',
     },
 
+    welcome: {
+      bg: 'phone.jpg',
+      phrase: 'Keep your phone connected',
+    },
+
+    undeChevronOnClick: {
+      info: 'Message info',
+      delete: 'Delete message' 
+    },
+
     contacts: [
       {
         name: 'Michele',
@@ -16,17 +26,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           }
@@ -38,17 +48,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:35:00',
+            date: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           }
@@ -60,17 +70,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '28/03/2020 10:10:40',
+            date: '10:10:40 28/03/2020 ',
             message: 'La Marianna va in campagna',
             status: 'received'
           },
           {
-            date: '28/03/2020 10:20:10',
+            date: '10:20:10 28/03/2020 ',
             message: 'Sicuro di non aver sbagliato chat?',
             status: 'sent'
           },
           {
-            date: '28/03/2020 16:15:22',
+            date: '16:15:22 28/03/2020 ',
             message: 'Ah scusa!',
             status: 'received'
           }
@@ -82,12 +92,12 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Si, ma preferirei andare al cinema',
             status: 'received'
           }
@@ -99,17 +109,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           },
@@ -121,17 +131,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            ddate: '20/03/2020 16:35:00',
+            ddate: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           },
@@ -143,12 +153,12 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Si, ma preferirei andare al cinema',
             status: 'received'
           },
@@ -160,17 +170,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '15:30:55 10/01/2020 ',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '15:50:00 10/01/2020 ',
             message: 'Ricordati di dargli da mangiare',
             status: 'sent'
           },
           {
-            date: '10/01/2020 16:15:22',
+            date: '16:15:22 10/01/2020 ',
             message: 'Tutto fatto!',
             status: 'received'
           },
@@ -182,17 +192,17 @@ const root = new Vue({
         visible: true,
         messages: [
           {
-            date: '20/03/2020 16:30:00',
+            date: '16:30:00 20/03/2020 ',
             message: 'Ciao come stai?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '16:30:55 20/03/2020 ',
             message: 'Bene grazie! Stasera ci vediamo?',
             status: 'sent'
           },
           {
-            date: '20/03/2020 16:35:00',
+            date: '16:35:00 20/03/2020 ',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'received'
           },
@@ -202,14 +212,99 @@ const root = new Vue({
 
     indexItem: -1,
     isActive: true,
+    newStr: '',
+    value: '',
+    show: true,
+    itemIndex: -1,
+    activeContact: 0,
   },
-  
+
   methods: {
     showIndex(index){
       this.indexItem = index;
-      console.log('indice', index);
+    },
+
+    addText( ){
+      let message = this.contacts[this.indexItem].messages;
+
+      if(this.newStr.length === 0 || !this.newStr.trim().length){
+        return
+      }
+
+      message.push({
+        date: this.getDate(),
+        message: this.newStr,
+        status: 'sent',
+      });
+      
+      this.newStr= '';
+      this.answerOk();
+    },
+
+    answerOk(){
+      let message = this.contacts[this.indexItem].messages;
+      let dateTime = this.getDate();
+
+      setTimeout(function() {
+        message.push({
+        date: dateTime,
+        message: 'Ok',
+        status: 'received'
+      });
+      }, 3000);
+    },
+
+    lastMessage(index){
+      let messageLast = this.contacts[index].messages[this.contacts[index].messages.length -1].message;
+      messageLast = messageLast.slice(0,12)+'...';
+      // console.log(messageLast);
+      
+      return messageLast;
+    },
+
+    getDate(){
+      let today = new Date().toLocaleDateString();
+      let now = new Date().toLocaleTimeString();
+
+      let date = now + ' ' + today;
+      return date;
+    },
+
+    searchContact(){
+      //console.log(this.value);
+      this.contacts.forEach(contact => { 
+        if (contact.name.toLowerCase().includes(this.value.toLowerCase())){
+          contact.visible = true;
+          // console.log('bbbbbbbbb',this.value);
+        } else {
+          contact.visible = false;
+          // console.log('cccccccc',this.value);
+        }
+      });
     },
     
+    mouseHover(index){
+      this.itemIndex = index
+
+      console.log('io sono message',index);
+      console.log('i message',this.itemIndex);
+    },
+
+    removeOnClick(index){
+
+
+      // if(confirm(`Sei sicuro di eliminare: "${this.contacts[index].messages[this.mouseHover()].message}"`)){
+        
+      // }
+      this.contacts[this.mouseHover(index)].messages[this.mouseHover(index)].message.splice(this.mouseHover(index), 1);
+      
+      console.log('message',message)
+      console.log(index);
+
+
+    },
+
+      
   },
   
-})
+});
